@@ -17,13 +17,14 @@ This project implements an intelligent mortgage loan processing system that:
 ```
 Automated-Mortgage-Loan-System/
 ├── Embedding/
-│   ├── main.py                                  # Python script for RAG pipeline
-│   ├── rag_chroma_pipeline_colab_final.ipynb   # Jupyter notebook (Colab-ready)
-│   └── Documents/                               # Input documents folder
-├── FineTuning/                                  # (Coming Soon) Model fine-tuning module
-├── MCP/                                         # (Coming Soon) Model Context Protocol integration
-├── .venv/                                       # Python virtual environment
-└── README.md                                    # This file
+│   ├── vector_embedding.ipynb                  # Main RAG pipeline notebook
+│   ├── Documents/                              # Input documents folder
+│   └── Output/                                 # Generated embeddings and outputs
+├── FineTuning/                                 # (Coming Soon) Model fine-tuning module
+├── MCP/                                        # (Coming Soon) Model Context Protocol integration
+├── .venv/                                      # Python virtual environment
+├── requirements.txt                            # Project dependencies
+└── README.md                                   # This file
 ```
 
 ## Quick Start
@@ -62,13 +63,15 @@ Automated-Mortgage-Loan-System/
 
 #### Option 1: Jupyter Notebook (Recommended for exploration)
 ```bash
-jupyter notebook Embedding/rag_chroma_pipeline_colab_final.ipynb
+jupyter notebook Embedding/vector_embedding.ipynb
 ```
 
 #### Option 2: Python Script
 ```bash
-python Embedding/main.py
+python Embedding/vector_embedding.ipynb
 ```
+
+**Note:** The main notebook (`vector_embedding.ipynb`) is designed to work in both local Jupyter environments and Google Colab.
 
 #### Option 3: Google Colab (Cloud-based, no local setup needed)
 Open the `.ipynb` file directly in [Google Colab](https://colab.research.google.com/)
