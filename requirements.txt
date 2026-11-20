@@ -1,6 +1,6 @@
 # Python 3.10+
 # Tested on Python 3.13 with: torch 2.15, sentence-transformers 6.3, chromadb 1.5,
-# transformers 5.23, streamlit 1.67, pdfplumber 0.11, python-docx 1.2, pytesseract 0.3.13, Pillow 13.0
+# transformers 5.23, pdfplumber 0.11, python-docx 1.2, pytesseract 0.3.13, Pillow 13.0
 # Also needs the Tesseract program for scanned documents (see README).
 
 # Models (embeddings + answer generation)
@@ -11,9 +11,6 @@ sentencepiece>=0.2
 
 # Vector database (PersistentClient needs 0.4+)
 chromadb>=0.5
-
-# Web interface (streamlit run app.py)
-streamlit>=1.40
 
 # Reading documents
 pdfplumber>=0.10

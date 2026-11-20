@@ -19,15 +19,18 @@ a lending policy.
    `COMPLIANT`, `NEEDS MANUAL REVIEW` or `NOT COMPLIANT`. Every problem is
    linked to the relevant policy section, and the typed data is compared
    with the signed scan to catch typing mistakes.
-5. **Keep history** of every report and question in SQLite, **watch** folders
-   to process new documents automatically, and use it all from a **web interface**.
+5. **Keep history** of every report and question in SQLite, and **watch** folders
+   to process new documents automatically.
+
+Run it on your computer with the command line, or in the browser with
+**Google Colab** (free GPU, nothing to install): see [Google Colab](#google-colab).
 
 ## Project structure
 
 ```
 Automated-Mortgage-Loan-System/
 ├── main.py                       # command line (see Usage)
-├── app.py                        # web interface: streamlit run app.py
+├── Mortgage_Loan_System_Colab.ipynb  # run everything in Google Colab
 ├── mortgage_ai/                  # the code, one small file per job
 │   ├── config.py                 #   all settings (paths, models, limits ...)
 │   ├── extract.py                #   file -> text (PDF, OCR, DOCX, images, JSON), OCR cache
@@ -53,7 +56,7 @@ Automated-Mortgage-Loan-System/
 │   ├── test_pipeline.py          # fast tests (no models, no OCR)
 │   ├── eval_questions.json       # questions with known answers
 │   └── fixtures/                 # OCR text of the sample scan
-├── Embedding/vector_embedding.ipynb  # original Google Colab notebook
+├── Embedding/vector_embedding.ipynb  # original prototype notebook (superseded)
 ├── output/                       # created when you run it (git-ignored)
 └── requirements.txt
 ```
@@ -109,7 +112,6 @@ python main.py read-scan data/applications/APP-001/scanned_form.pdf   # scan -> 
 python main.py evaluate                       # accuracy on tests/eval_questions.json
 python main.py watch                          # auto-process new files (Ctrl+C to stop)
 python main.py history                        # past reports and questions
-streamlit run app.py                          # web interface
 ```
 
 ### Adding an application
@@ -118,9 +120,9 @@ Create a folder in `data/applications/` (e.g. `APP-003/`) and put in:
 - `typed_form.json` (or `.docx` containing JSON): the form data, same fields as APP-001, and/or
 - `scanned_form.pdf` (or an image): the signed Form 1003.
 
-Then run `python main.py ingest` and `python main.py check APP-003`,
-or upload the files in the web interface. With only a scan, the form is
-read with OCR; with both, the typed data is checked and compared with the scan.
+Then run `python main.py ingest` and `python main.py check APP-003`
+(in Colab: step 8 of the notebook uploads the files for you). With only a scan,
+the form is read with OCR; with both, the typed data is checked and compared with the scan.
 
 ### Example
 
@@ -175,6 +177,7 @@ Everything is in [mortgage_ai/config.py](mortgage_ai/config.py):
 | `MIN_RELEVANCE` | 0.6 | below this: "Not found in the documents." |
 | `REGULATION_MIN_SCORE` | 0.85 | minimum score to cite a policy section |
 | `ASSUMED_INTEREST_RATE` / `ASSUMED_TERM_YEARS` | 7% / 30 | for the DTI estimate when the application has no rate/term |
+| `OUTPUT_DIR` | `output/` | set the `MORTGAGE_OUTPUT_DIR` environment variable to store results elsewhere (e.g. Google Drive) |
 
 Compliance limits (DTI, LTV per occupancy, units, ...) are in `LIMITS` at the
 top of [mortgage_ai/compliance.py](mortgage_ai/compliance.py).
@@ -189,9 +192,27 @@ python main.py evaluate               # answer accuracy with the real models (~1
 
 ## Google Colab
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cosmos117/Automated-Mortgage-Loan-System/blob/feature/full-pipeline/Mortgage_Loan_System_Colab.ipynb)
+
+[Mortgage_Loan_System_Colab.ipynb](Mortgage_Loan_System_Colab.ipynb) runs the
+whole system in the browser, with nothing to install on your computer:
+
+1. Open the notebook in Colab (badge above, or *File → Upload notebook*).
+2. *Runtime → Change runtime type → T4 GPU*.
+3. *Runtime → Run all*. The first run downloads ~3 GB of models and OCRs the sample scan (~5 minutes).
+
+The notebook clones this repository, installs Tesseract and the Python packages,
+then walks through: ingest → compliance check → questions → reading a scan →
+checking your own uploaded application → accuracy → downloading the reports.
+
+- **Keep results between sessions:** set `SAVE_TO_DRIVE = True` in step 3 to store
+  the database, OCR cache and reports on Google Drive.
+- **Private repository or unpushed branch:** zip the project (without `.venv` and
+  `output`), upload it in Colab's Files panel and unzip it, as described in step 1.
+- `python main.py watch` is not used in Colab (it runs forever); re-run step 4 instead.
+
 [Embedding/vector_embedding.ipynb](Embedding/vector_embedding.ipynb) is the
-original single-notebook version of the RAG pipeline for Google Colab
-(upload files when prompted, run cells top to bottom).
+original single-notebook prototype, kept for reference.
 
 ## Known limitations
 

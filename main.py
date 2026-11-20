@@ -11,7 +11,6 @@ Command line for the Automated Mortgage Loan System.
     python main.py evaluate                     # accuracy on the test questions
     python main.py watch                        # auto-process new / changed files
     python main.py history                      # past reports and questions
-    streamlit run app.py                        # web interface
 """
 import argparse
 import json

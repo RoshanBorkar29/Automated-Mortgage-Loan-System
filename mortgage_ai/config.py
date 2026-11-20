@@ -23,7 +23,9 @@ TYPED_FORM_NAME = "typed_form"
 SCANNED_FORM_NAME = "scanned_form"
 
 # ---------------------------------------------------------------- output folders (git-ignored)
-OUTPUT_DIR = PROJECT_ROOT / "output"
+# Set MORTGAGE_OUTPUT_DIR to keep results somewhere else, e.g. on Google Drive in
+# Colab (so the database and OCR cache survive a runtime reset).
+OUTPUT_DIR = Path(os.getenv("MORTGAGE_OUTPUT_DIR", PROJECT_ROOT / "output"))
 DB_DIR = OUTPUT_DIR / "chroma_db"          # Chroma vector database
 JSON_DIR = OUTPUT_DIR / "doc_jsons"        # extracted text + chunks, one JSON per file
 TEXT_CACHE_DIR = OUTPUT_DIR / "text_cache" # OCR results, so a scan is only OCR'd once
