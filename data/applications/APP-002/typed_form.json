@@ -1,0 +1,82 @@
+{
+  "_note": "Fictional sample applicant for testing. Not a real person.",
+  "borrower": {
+    "name": "PRIYA SAMPLE",
+    "social_security_number": "123-45-6789",
+    "date_of_birth": "07/14/1988",
+    "citizenship": "U.S. Citizen",
+    "marital_status": "Married",
+    "dependents": {"number": 2, "ages": [6, 9]},
+    "contact_information": {
+      "cell_phone": "555-010-2233",
+      "email": "priya.sample@example.com"
+    },
+    "current_address": {
+      "street": "OAK AVENUE", "unit": "12", "city": "AUSTIN", "state": "TX", "zip": "73301", "country": "USA",
+      "duration": "4 years 2 months", "housing_status": "Rent"
+    }
+  },
+  "employment": {
+    "current_employment": {
+      "employer": "CITY GENERAL HOSPITAL",
+      "position": "NURSE MANAGER",
+      "start_date": "03/01/2017",
+      "experience": "8 years",
+      "employed_by_family_member": false,
+      "income": {
+        "base": 9500, "overtime": 800, "bonus": 0, "commission": 0,
+        "military_entitlements": 0, "other": 0, "monthly_total_income": 10300
+      }
+    }
+  },
+  "assets": {
+    "bank_and_investment_accounts": [
+      {"type": "Savings", "institution": "FIRST STATE BANK", "value": 65000},
+      {"type": "Retirement", "institution": "FIDELITY", "value": 42000}
+    ],
+    "total_asset_value": 107000
+  },
+  "liabilities": {
+    "credit_cards_and_loans": [
+      {"type": "Installment", "company": "AUTO FINANCE CO", "unpaid_balance": 14000, "monthly_payment": 420}
+    ],
+    "other_liabilities_expenses": []
+  },
+  "real_estate": {"owns_real_estate": false},
+  "loan_information": {
+    "loan_amount": 340000,
+    "loan_purpose": "Purchase",
+    "interest_rate": 6.5,
+    "term_years": 30,
+    "property": {
+      "address": {"street": "MAPLE DRIVE", "unit": "1", "city": "AUSTIN", "state": "TX", "zip": "73344", "country": "USA"},
+      "value": 400000,
+      "number_of_units": 1,
+      "occupancy_type": "Primary Residence",
+      "mixed_use_property": false,
+      "manufactured_home": false
+    }
+  },
+  "declarations": {
+    "occupy_property_as_primary_residence": true,
+    "ownership_last_3_years": false,
+    "relation_with_seller": false,
+    "borrowing_additional_money": false,
+    "applying_for_other_mortgage": false,
+    "new_credit_before_closing": false,
+    "property_priority_lien": false,
+    "co_signer": false,
+    "outstanding_judgments": false,
+    "delinquent_on_federal_debt": false,
+    "party_to_lawsuit": false,
+    "conveyed_title_in_lieu_of_foreclosure": false,
+    "pre_foreclosure_or_short_sale": false,
+    "property_foreclosed_last_7_years": false,
+    "declared_bankruptcy_last_7_years": false
+  },
+  "loan_originator_information": {
+    "organization_name": "SAMPLE MORTGAGE CO",
+    "originator_name": "ALEX EXAMPLE",
+    "signature_date": "11/03/2025"
+  }
+}
