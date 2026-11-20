@@ -1,0 +1,35 @@
+SAMPLE RESIDENTIAL MORTGAGE LENDING POLICY (for demonstration only). This policy is a simplified example modelled on common US conventional mortgage guidelines such as the Fannie Mae Selling Guide. It is not an official regulation. Replace it with your institution's approved credit policy before real use.
+
+Section 1.1 Identity verification. The borrower's identity must be verified. The Social Security Number must be a valid nine-digit number in the format 123-45-6789 and must be verified against government records before the loan is approved.
+
+Section 1.2 Accuracy of application data. All information on the loan application must be complete and accurate. Information typed into the loan system must match the signed application. Any difference between the typed data and the signed form must be resolved and documented by the underwriter before approval.
+
+Section 2.1 Borrower eligibility and age. The borrower must be at least 18 years old and have the legal capacity to enter into a binding loan contract. U.S. citizens, permanent resident aliens and eligible non-permanent resident aliens may apply.
+
+Section 3.1 Employment history and income stability. The lender must document a two-year history of employment and income. A borrower with less than two years in the current job requires documentation of previous employment or education explaining the gap. Stated experience must be consistent with employment dates.
+
+Section 3.2 Income calculation. Each income component (base, overtime, bonus, commission, military entitlements and other income) must be documented. The total monthly income on the application must equal the sum of its components. Rental income from a second home may not be used to qualify the borrower.
+
+Section 4.1 Debt-to-income ratio. The debt-to-income ratio is the total monthly debt payments, including the proposed housing payment (principal, interest, property taxes and insurance), divided by the gross monthly income. The maximum debt-to-income ratio is 43 percent. Ratios between 43 and 50 percent require compensating factors and underwriter approval. Ratios above 50 percent are not eligible.
+
+Section 5.1 Loan-to-value ratio limits. The loan-to-value ratio is the loan amount divided by the property value. The maximum loan-to-value ratio is 97 percent for a primary residence, 90 percent for a second home and 85 percent for an investment property. Loans with a loan-to-value ratio above 80 percent require private mortgage insurance.
+
+Section 6.1 Eligible properties and number of units. Residential mortgage loans may be made only on properties with one to four dwelling units. Properties with five or more units are commercial properties and must be financed with a commercial loan.
+
+Section 6.2 Mixed-use properties. A property used partly for business is eligible only if the business use is secondary, the property remains primarily residential, and the borrower is both the owner and operator of the business. Mixed-use properties require underwriter review.
+
+Section 6.3 Manufactured homes. Manufactured homes must be built on a permanent chassis, be legally classified as real property and meet additional eligibility requirements.
+
+Section 7.1 Occupancy. The borrower must state truthfully whether the property will be a primary residence, second home or investment property. The occupancy type on the application must be consistent with the borrower's declarations. Misrepresentation of occupancy is mortgage fraud and may result in civil liability and criminal penalties.
+
+Section 8.1 Significant derogatory credit events and waiting periods. A borrower who has had a property foreclosed within the past seven years is not eligible. After a deed-in-lieu of foreclosure, pre-foreclosure sale or short sale, a waiting period of four years is required. After a bankruptcy, a waiting period of two to four years is required depending on the bankruptcy chapter. The underwriter must verify the dates of these events.
+
+Section 8.2 Delinquent federal debt. A borrower who is currently delinquent or in default on a federal debt, such as a federal student loan or federal tax, is not eligible until the debt is brought current or a satisfactory repayment plan is in place.
+
+Section 8.3 Outstanding judgments and lawsuits. Outstanding judgments must be paid off before or at closing. If the borrower is a party to a lawsuit with potential personal financial liability, the underwriter must review the case and the possible liability before approval.
+
+Section 9.1 Liens with priority over the first mortgage. The property must not be subject to any lien that takes priority over the first mortgage, such as a Property Assessed Clean Energy (PACE) loan paid through property taxes, unless the lien is paid off at or before closing.
+
+Section 9.2 Non-arm's-length transactions. When the borrower has a family relationship or business affiliation with the seller, the transaction is non-arm's length and requires underwriter review of the sales price, the appraisal and the source of funds.
+
+Section 9.3 Undisclosed borrowing and new credit. All money borrowed for the transaction and all new credit applied for before closing must be disclosed and included in the debt-to-income ratio.
